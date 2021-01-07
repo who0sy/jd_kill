@@ -2,7 +2,7 @@ FROM python:3.8-slim-buster
 
 LABEL MAINTAINER="@weidonggg"
 
-ENV GIT_BRANCH master
+ENV GIT_BRANCH main
 ENV TIMEZONE Asia/Shanghai
 
 COPY docker-python-entrypoint /usr/local/bin/
@@ -34,7 +34,7 @@ RUN set -ex; \
                    libnss3; \
       \
       # clone jd seckill code.
-      git clone -b $GIT_BRANCH https://github.com/huanghyw/jd_seckill.git /app; \
+      git clone -b $GIT_BRANCH https://github.com/who0sy/jd_kill.git /app; \
       cd /app \
         && rm -rf .git; \
       \
